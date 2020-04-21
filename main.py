@@ -7,20 +7,18 @@ Work out Luhn's algorithm.
 
 # None of these numbers are actual credit card numbers, only generated ones for test purposes.
 
-#credit_card = 4757789945729320
+credit_card = 4757789945729320
 #credit_card = 4370366259700473
 #credit_card = 4111111111111111
-credit_card = 37562198673
+#credit_card = 37562198673
 
 
 ######
-print("Here is our credit card number")
 credit_card_array = [int(num) for num in str(credit_card)]
-print(credit_card_array)
+print("\n\nHere is our credit card number: {}".format(credit_card_array))
 
-print("\nAnd our checksum is")
 checksum = credit_card_array.pop(-1)
-print(checksum)
+print("\nAnd our checksum is: {}".format(checksum))
 
 luhn = []
 new_luhn = []
@@ -60,15 +58,11 @@ print("\nNow we add all the digits, and multiply by 9")
 final_luhn = sum(new_luhn) * 9
 print(final_luhn)
 
-print("\nwith a verification unit of")
-verification = [int(num) for num in str(final_luhn)]
-print(verification)
+ver_unit = [int(num) for num in str(final_luhn)]
+print("\nWith a verification unit of: {}".format(ver_unit))
 
-print("\nNow we check the verification unit against the checksum\n")
-if verification[-1] is not checksum:
+print("\nNow we check the verification unit against the checksum: {} and {}\n".format(ver_unit[-1], checksum))
+if ver_unit[-1] is not checksum:
     print("This is NOT a valid credit card.")
 else:
     print("This is a valid credit card.")
-
-luhn
-
