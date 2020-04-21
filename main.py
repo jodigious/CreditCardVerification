@@ -5,6 +5,8 @@ Work out Luhn's algorithm.
 # Sample credit card number for use with this program
 # https://saijogeorge.com/dummy-credit-card-generator/
 
+# None of these numbers are actual credit card numbers, only generated ones for test purposes.
+
 #credit_card = 4757789945729320
 #credit_card = 4370366259700473
 #credit_card = 4111111111111111
